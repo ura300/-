@@ -1,0 +1,12 @@
+#include <iostream>
+#include "windows.h"
+int main() {
+    std::cout << "Write n: ";
+    int n = 0;
+    std::cin >> n;
+    while (n > 0) {
+        std::cout << n << " ";
+        Sleep(1000); // wait for 1 second
+        n--;
+    }
+}
