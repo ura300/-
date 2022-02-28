@@ -1,1 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+    system("chcp 65001");
+    int n;
+    int o;
+    cout << "Введите число яблок:" << endl;
+    cin >> n;
+    o = n%10;
+    if(n>=10 and n<21)
+        cout<< n << " яблок"<<endl;
+    switch (o) {
 
+        case 1:
+            cout<< n << " яблоко"<<endl;
+            break;
+        case 2: case 3: case 4:
+            cout<< n << " яблока"<<endl;
+            break;
+        case 0: case 5: case 6: case 7: case 8: case 9:
+            cout<< n << " яблок"<<endl;
+            break;
+    }
+    return 0;
+}
