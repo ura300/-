@@ -1,12 +1,17 @@
 #include <iostream>
 #include "windows.h"
+using namespace std;
+
 int main() {
-    std::cout << "Write n: ";
-    int n = 0;
-    std::cin >> n;
-    while (n > 0) {
-        std::cout << n << " ";
-        Sleep(1000); // wait for 1 second
-        n--;
+    system("chcp 65001");
+    int n;
+    cout << "Введите число: " << endl;
+    cin >> n;
+    while(n >= 1){
+        cout << n << endl;
+        n = n -1;
+        Sleep(1000);
     }
+
+    return 0;
 }
