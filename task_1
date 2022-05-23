@@ -1,32 +1,33 @@
 #include <iostream>
 using namespace std;
-int main()
-{
-    char op;
-    float num1, num2;
-    cout << "Enter your operation + or - or * or /:\n";
-    cin >> op;
-    cout << "Enter first numbers:\n";
-    cin >> num1;
-    cout << "Enter second numbers:\n";
-    cin >> num2;
-    switch(op)
-    {
+int main(){
+    system("chcp 65001");
+    float a, b;
+    char c;
+    cout << "Введите первое число:\n" << endl;
+    cin >> a;
+    cout << "Введите второе число:\n" << endl;
+    cin >> b;
+    cout << "Введите символ действия:\n" << endl;
+    cin >> c;
+    switch(c){
         case '+':
-            cout << num1+num2;
+            cout << a+b << endl;
             break;
         case '-':
-            cout << num1-num2;
+            cout << a-b << endl;
             break;
         case '*':
-            cout << num1*num2;
+            cout << a*b << endl;
             break;
         case '/':
-            cout << num1/num2;
+            if(b==0)
+                cout << "Неверная опперация" << endl;
+            else
+                cout << a/b << endl;
             break;
         default:
-            cout << "Operation not find";
+            cout << "Невозможно выполнить" << endl;
             break;
     }
     return 0;
-}
